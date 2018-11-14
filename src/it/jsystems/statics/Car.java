@@ -49,6 +49,7 @@ public class Car {
 	}
 	
 	public static void main(String[] args) {
+		System.out.println(StringUtils.isPalindrome("KAjaK"));
 		Car c1 = new Car("V8", "Jaguar");
 		Car c2 = new Car("V16", "Audi");
 		System.out.println(Car.numberOfCars);

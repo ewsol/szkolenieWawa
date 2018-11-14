@@ -28,7 +28,14 @@ public final class StringUtils {
 			}
 		}
 		return s;
-
+	}
+	
+	public static boolean isPalindrome(String s) {
+		if(s != null) {
+			String reversed = new StringBuilder(s).reverse().toString();
+			return s.equalsIgnoreCase(reversed);
+		}
+		return false;
 	}
 
 }
