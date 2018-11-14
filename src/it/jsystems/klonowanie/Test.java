@@ -35,7 +35,7 @@ public class Test {
 		wyœwietl(o1, o2, o3);
 	}
 
-	private static <T> void wyœwietl(T... points) {
+	private static <T> void wyœwietl(@SuppressWarnings("unchecked") T... points) {
 		for (T t: points) {
 			System.out.println(t.toString());
 		}
