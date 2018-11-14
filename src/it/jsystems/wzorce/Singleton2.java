@@ -1,4 +1,4 @@
-package it.jsystems.statics;
+package it.jsystems.wzorce;
 
 public class Singleton2 {
 
