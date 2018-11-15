@@ -2,7 +2,6 @@ package it.jsystems.employees;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.IntSummaryStatistics;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -21,9 +20,8 @@ public class MyClass {
 		policzSredniWiek(pracownicy);
 		System.out.println(chief.toString());
 		System.out.println(junior.toString());
-
 	}
-	Math
+	
 
 	private static void policzSredniWiek(List<Employee> pracownicy) {
 		double averageAge = pracownicy.stream()

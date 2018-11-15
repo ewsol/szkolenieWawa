@@ -16,7 +16,6 @@ public class Boss extends Employee {
 	
 	public Boss(String name, int age, int salary, int bonus) {
 		super(name, age, salary, bonus);
-		this.factor = factor;
 	}
 
 
