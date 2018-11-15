@@ -12,17 +12,20 @@ import java.nio.file.Paths;
 public class Serializacja {
 
 	public static void main(String[] args) throws IOException, ClassNotFoundException {
+		Pies sonia = new Pies("Sonia");
 		String filePath = "D:/objects.bin";
 		Path path = Paths.get(filePath);
 
 		if (Files.notExists(path)) {
 			Files.createFile(path);
 		}
+		//zapis do pliku
 		try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(filePath))) {
 			out.writeObject(Integer.valueOf(10));
 			out.writeObject(Integer.valueOf(20));
 		}
 
+		//odczyt z pliku
 		try (ObjectInputStream in = new ObjectInputStream(new FileInputStream(filePath))) {
 			Integer number1 = (Integer) in.readObject();
 			System.out.println("Pierwsza: " + number1);

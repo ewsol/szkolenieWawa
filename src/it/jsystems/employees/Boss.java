@@ -13,15 +13,14 @@ public class Boss extends Employee {
 
 	private int factor = 2;
 
-	public Boss(String name, int salary, int bonus, int factor) {
-		super(name, salary, bonus);
+	
+	public Boss(String name, int age, int salary, int bonus) {
+		super(name, age, salary, bonus);
 		this.factor = factor;
 	}
 
-	public Boss(String name, int salary, int bonus) {
-		super(name, salary, bonus);
-	}
-	
+
+
 	@Override
 	public int getSalary() {
 		return super.getSalary() * factor;

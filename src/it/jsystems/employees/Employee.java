@@ -5,8 +5,8 @@ import java.util.Arrays;
 public class Employee implements Comparable<Employee> {
 
 	public static void main(String[] args) {
-		Employee[] array = { new Employee("Aga", 20000, 2000), new Employee("Ewa", 7000, 1000),
-				new Employee("Adam", 3000, 500), new Employee("Iza", 15000, 0) };
+		Employee[] array = { new Employee("Aga",20, 20000, 2000), new Employee("Ewa", 32,  7000, 1000),
+				new Employee("Adam", 56, 3000, 500), new Employee("Iza", 19, 15000, 0) };
 		Arrays.sort(array);
 		System.out.println("by salary: " + Arrays.toString(array));
 
@@ -25,6 +25,15 @@ public class Employee implements Comparable<Employee> {
 	}
 
 	String name;
+	protected int age;
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
 	protected int salary;
 	protected int bonus;
 
@@ -36,11 +45,13 @@ public class Employee implements Comparable<Employee> {
 		this.bonus = bonus;
 	}
 
-	public Employee(String name, int salary, int bonus) {
+
+	public Employee(String name, int age, int salary, int bonus) {
 		super();
 		this.name = name;
-		this.bonus = bonus;
+		this.age = age;
 		this.salary = salary;
+		this.bonus = bonus;
 	}
 
 	public String getName() {
